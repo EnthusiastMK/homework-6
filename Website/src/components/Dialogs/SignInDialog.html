@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignInDialog</title>
+    <link rel="stylesheet" href="../../assets/styles/reset.css">
+    <link rel="stylesheet" href="./signindialog.css">
+</head>
+<body class="body">
+    <div class="signin">
+        <h3 class="signin__name">Sign in</h3>
+        <form  class="signin__form">
+            <input id="signInUser" value="" placeholder="Email or username" type="text" class="signin__input">
+            <input id="signInPassword" value="" placeholder="Password" type="password" class="signin__input">
+            <button type="submit" class="signin__sign-btn">Sign in</button>
+        </form>     
+    </div>   
+    <script>
+        const signInUser = document.getElementById('signInUser');
+        const signInPassword = document.getElementById('signInPassword');
+        const exploreForm = document.querySelector('.signin__form');
+        
+        const handleSubmitEmail = (e) => {
+            e.preventDefault();
+            console.log('Email or username:', signInUser.value);
+            console.log('Password:', signInPassword.value);
+        };
+
+        exploreForm.addEventListener('submit', handleSubmitEmail);
+    </script> 
+</body>
+</html>

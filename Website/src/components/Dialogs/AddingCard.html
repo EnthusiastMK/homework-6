@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AddingCard</title>
+    <link rel="stylesheet" href="../../assets/styles/reset.css">
+    <link rel="stylesheet" href="./addingcard.css">
+</head>
+<body class="body">
+    <div class="addingcard__bg">
+        <img src="../../assets/images/AddingCard/bg_addingcard.png" alt="Background" class="addingcard__bg-img">
+        <h2 class="addingcard__bg-name">Realities cards</h2>
+    </div>
+    <div class="addingcard">
+        <h3 class="addingcard__name">Add new card</h3>
+        <form class="addingcard__form">
+            <input id="addincardName" value="" class="addingcard__input" placeholder="Card name" type="text">
+            <input id="addincardDescr" value="" class="addingcard__input" placeholder="Card description" type="text">
+            <input id="addincardImage" value="" class="addingcard__input" placeholder="Card image name" type="text">
+            <button type="submit" class="addingcard__button">Add</button>
+        </form>    
+    </div>    
+    <img src="../../assets/icons/AddingCard/Ellipse 18.svg" alt="ellipse" class="addingcard__ellipse"> 
+    <script>
+        const addincardName = document.getElementById('addincardName');
+        const addincardDescr = document.getElementById('addincardDescr');
+        const addincardImage = document.getElementById('addincardImage');
+        const exploreForm = document.querySelector('.addingcard__form');
+
+        const handleSubmitEmail = (e) => {
+            e.preventDefault();
+            console.log('Card name:', addincardName.value);
+            console.log('Card description:', addincardDescr.value);
+            console.log('Card image name:', addincardImage.value);
+        };
+
+        exploreForm.addEventListener('submit', handleSubmitEmail);
+    </script>
+</body>
+</html>
